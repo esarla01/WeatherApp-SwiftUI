@@ -14,11 +14,32 @@ struct WeatherButton: View {
     var backgroundColor: Color
     
     var body: some View {
-        Text(title)
-            .frame(width: 200, height: 50)
-            .background(backgroundColor.gradient)
-            .foregroundColor(textColor)
-            .font(.system(size:20, weight: .medium, design: .default))
-            .cornerRadius(10)
+        VStack (spacing: 20) {
+            Text(title)
+                .frame(width: 200, height: 50)
+                .background(backgroundColor.gradient)
+                .cornerRadius(10)
+
+                           
+//            Text(title)
+//                .frame(width: 200, height: 50)
+//                .background(backgroundColor.gradient)
+//                .cornerRadius(10)
+
+                           
+        }
+        .foregroundColor(textColor)
+        .font(.system(size:20, weight: .medium, design: .default))
+        
+
     }
+}
+ 
+
+#Preview {
+    WeatherButton(title: "Test Title",
+                  textColor: .white,
+                  backgroundColor: .blue
+        
+    )
 }
